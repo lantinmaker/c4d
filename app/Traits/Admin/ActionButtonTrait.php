@@ -40,4 +40,31 @@ trait ActionButtonTrait
     {
         return $this->editButton($actionModel,$id).$this->deleteButton($actionModel,$id);
     }
+
+    public function getActionButtonsWithMore($actionModel,$id = null)
+    {
+        return $this->editButton($actionModel,$id).$this->deleteButton($actionModel,$id).$this->showImageButton($actionModel,$id).$this->showFileButton($actionModel,$id);
+    }
+
+    public function showImageButton($actionModel,$id = null)
+    {
+        if (!empty($id)){
+            $this->id = $id;
+        }
+        if (auth('admin')->user()->can("{$actionModel}.image")){
+            return "<a href='".url('admin').'/'.$actionModel.'/'.$this->id."/images'><button type='button' class='btn btn-info btn-xs'><i class='fa fa-file-image-o'> 图片</i></button></a> ";
+        }
+        return '';
+    }
+
+    public function showFileButton($actionModel,$id = null)
+    {
+        if (!empty($id)){
+            $this->id = $id;
+        }
+        if (auth('admin')->user()->can("{$actionModel}.file")){
+            return "<a href='".url('admin').'/'.$actionModel.'/'.$this->id."/files'><button type='button' class='btn btn-warning btn-xs'><i class='fa fa-file-o'> 文件</i></button></a> ";
+        }
+        return '';
+    }
 }

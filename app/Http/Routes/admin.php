@@ -19,6 +19,39 @@ Route::group(['middleware' => ['auth:admin']], function ($router) {
     //角色管理
     $router->get('role/ajaxIndex',['uses'=>'RoleController@ajaxIndex','as'=>'admin.role.ajaxIndex']);
     $router->resource('role', 'RoleController');
+
+    $router->get('models/{id?}/files' , 'Documents\ModelController@files');
+    $router->get('models/{id?}/images' , 'Documents\ModelController@images');
+    $router->resource('models' , 'Documents\ModelController');
+
+
+    $router->get('projects/{id?}/files' , 'Documents\ProjectController@files');
+    $router->get('projects/{id?}/images' , 'Documents\ProjectController@images');
+    $router->resource('projects' , 'Documents\ProjectController');
+
+    $router->get('materials/{id?}/files' , 'Documents\MaterialController@files');
+    $router->get('materials/{id?}/images' , 'Documents\MaterialController@images');
+    $router->resource('materials' , 'Documents\MaterialController');
+
+
+    $router->get('decals/{id?}/files' , 'Documents\DecalController@files');
+    $router->get('decals/{id?}/images' , 'Documents\DecalController@images');
+    $router->resource('decals' , 'Documents\DecalController');
+
+
+    $router->get('defaults/{id?}/files' , 'Documents\DefaultController@files');
+    $router->get('defaults/{id?}/images' , 'Documents\DefaultController@images');
+    $router->resource('defaults' , 'Documents\DefaultController');
+
+    $router->get('plugins/{id?}/files' , 'Documents\PluginController@files');
+    $router->get('plugins/{id?}/images' , 'Documents\PluginController@images');
+    $router->resource('plugins' , 'Documents\PluginController');
+
+    $router->get('users/data' , ['uses' => 'UserController@data' , 'as' => 'users.data' ]);
+    $router->get('users/vip' , ['uses' => 'UserController@vip' , 'as' => 'users.vip' ]);
+    $router->get('users/black' , ['uses' => 'UserController@black' , 'as' => 'users.black' ]);
+    $router->resource('users','UserController');
+
 });
 
 Route::get('login', ['uses' => 'AuthController@index','as' => 'admin.auth.index']);

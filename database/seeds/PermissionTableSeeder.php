@@ -17,6 +17,10 @@ class PermissionTableSeeder extends Seeder
         $this->adminUser();
         $this->permission();
         $this->role();
+
+        $this->user();
+
+        $this->document();
     }
 
     /**
@@ -149,5 +153,330 @@ class PermissionTableSeeder extends Seeder
         $roleDelete->display_name = '删除角色';
         $roleDelete->description = '删除角色';
         $roleDelete->save();
+    }
+
+    public function user()
+    {
+        $userList = New Permission();
+        $userList->name = 'users.list';
+        $userList->display_name = '用户列表';
+        $userList->description = "用户列表";
+        $userList->save();
+
+        $userAdd = New Permission();
+        $userAdd->name = 'users.add';
+        $userAdd->display_name = '增加用户';
+        $userAdd->description = "增加用户";
+        $userAdd->save();
+
+        $userEdit = New Permission();
+        $userEdit->name = 'users.edit';
+        $userEdit->display_name = '编辑用户';
+        $userEdit->description = "编辑用户";
+        $userEdit->save();
+
+        $userDelete = New Permission();
+        $userDelete->name = 'users.delete';
+        $userDelete->display_name = '删除用户';
+        $userDelete->description = "删除用户";
+        $userDelete->save();
+
+        $userData = New Permission();
+        $userData->name = 'users.data';
+        $userData->display_name = '用户数据分析';
+        $userData->description = "用户数据分析";
+        $userData->save();
+
+        $userVip = New Permission();
+        $userVip->name = 'users.vip';
+        $userVip->display_name = 'VIP用户';
+        $userVip->description = "VIP用户";
+        $userVip->save();
+
+        $blackUser = New Permission();
+        $blackUser->name = 'users.black';
+        $blackUser->display_name = '黑名单';
+        $blackUser->description = "黑名单";
+        $blackUser->save();
+    }
+
+    public function document()
+    {
+        $this->models();
+        $this->defaults();
+        $this->projects();
+        $this->materials();
+        $this->decals();
+        $this->plugins();
+    }
+
+    public function models()
+    {
+        $list = new Permission();
+        $list->name = 'models.list';
+        $list->display_name = '模型列表';
+        $list->description = "模型列表";
+        $list->save();
+
+        $add = new Permission();
+        $add->name = 'models.add';
+        $add->display_name = '增加模型';
+        $add->description = "增加模型";
+        $add->save();
+
+        $edit = new Permission();
+        $edit->name = 'models.edit';
+        $edit->display_name = '编辑模型';
+        $edit->description = "编辑模型";
+        $edit->save();
+
+        $save = new Permission();
+        $save->name = 'models.save';
+        $save->display_name = '保存模型';
+        $save->description = "保存模型";
+        $save->save();
+
+        $delete = new Permission();
+        $delete->name = 'models.delete';
+        $delete->display_name = '删除模型';
+        $delete->description = "删除模型";
+        $delete->save();
+
+        $file = new Permission();
+        $file->name = "models.file";
+        $file->display_name = "模型文件";
+        $file->description = "模型文件";
+        $file->save();
+
+        $image = new Permission();
+        $image->name = "models.image";
+        $image->display_name = "模型图片";
+        $image->description = "模型图片";
+        $image->save();
+    }
+
+    public function projects()
+    {
+        $list = new Permission();
+        $list->name = 'projects.list';
+        $list->display_name = '工程列表';
+        $list->description = "工程列表";
+        $list->save();
+
+        $add = new Permission();
+        $add->name = 'projects.add';
+        $add->display_name = '增加工程';
+        $add->description = "增加工程";
+        $add->save();
+
+        $edit = new Permission();
+        $edit->name = 'projects.edit';
+        $edit->display_name = '编辑工程';
+        $edit->description = "编辑工程";
+        $edit->save();
+
+        $save = new Permission();
+        $save->name = 'projects.save';
+        $save->display_name = '保存工程';
+        $save->description = "保存工程";
+        $save->save();
+
+        $delete = new Permission();
+        $delete->name = 'projects.delete';
+        $delete->display_name = '删除工程';
+        $delete->description = "删除工程";
+        $delete->save();
+
+        $file = new Permission();
+        $file->name = "projects.file";
+        $file->display_name = "工程文件";
+        $file->description = "工程文件";
+        $file->save();
+
+        $image = new Permission();
+        $image->name = "projects.image";
+        $image->display_name = "工程图片";
+        $image->description = "工程图片";
+        $image->save();
+    }
+
+    public function defaults()
+    {
+        $list = new Permission();
+        $list->name = 'defaults.list';
+        $list->display_name = '预设列表';
+        $list->description = "预设列表";
+        $list->save();
+
+        $add = new Permission();
+        $add->name = 'defaults.add';
+        $add->display_name = '增加预设';
+        $add->description = "增加预设";
+        $add->save();
+
+        $edit = new Permission();
+        $edit->name = 'defaults.edit';
+        $edit->display_name = '编辑预设';
+        $edit->description = "编辑预设";
+        $edit->save();
+
+        $save = new Permission();
+        $save->name = 'defaults.save';
+        $save->display_name = '保存预设';
+        $save->description = "保存预设";
+        $save->save();
+
+        $delete = new Permission();
+        $delete->name = 'defaults.delete';
+        $delete->display_name = '删除预设';
+        $delete->description = "删除预设";
+        $delete->save();
+
+        $file = new Permission();
+        $file->name = "defaults.file";
+        $file->display_name = "预设文件";
+        $file->description = "预设文件";
+        $file->save();
+
+        $image = new Permission();
+        $image->name = "defaults.image";
+        $image->display_name = "预设图片";
+        $image->description = "预设图片";
+        $image->save();
+    }
+
+    public function materials()
+    {
+        $list = new Permission();
+        $list->name = 'materials.list';
+        $list->display_name = '材质列表';
+        $list->description = "材质列表";
+        $list->save();
+
+        $add = new Permission();
+        $add->name = 'materials.add';
+        $add->display_name = '增加材质';
+        $add->description = "增加材质";
+        $add->save();
+
+        $edit = new Permission();
+        $edit->name = 'materials.edit';
+        $edit->display_name = '编辑材质';
+        $edit->description = "编辑材质";
+        $edit->save();
+
+        $save = new Permission();
+        $save->name = 'materials.save';
+        $save->display_name = '保存材质';
+        $save->description = "保存材质";
+        $save->save();
+
+        $delete = new Permission();
+        $delete->name = 'materials.delete';
+        $delete->display_name = '删除材质';
+        $delete->description = "删除材质";
+        $delete->save();
+
+        $file = new Permission();
+        $file->name = "materials.file";
+        $file->display_name = "材质文件";
+        $file->description = "材质文件";
+        $file->save();
+
+        $image = new Permission();
+        $image->name = "materials.image";
+        $image->display_name = "材质图片";
+        $image->description = "材质图片";
+        $image->save();
+    }
+
+    public function decals()
+    {
+        $list = new Permission();
+        $list->name = 'decals.list';
+        $list->display_name = '贴图列表';
+        $list->description = "贴图列表";
+        $list->save();
+
+        $add = new Permission();
+        $add->name = 'decals.add';
+        $add->display_name = '增加贴图';
+        $add->description = "增加贴图";
+        $add->save();
+
+        $edit = new Permission();
+        $edit->name = 'decals.edit';
+        $edit->display_name = '编辑贴图';
+        $edit->description = "编辑贴图";
+        $edit->save();
+
+        $save = new Permission();
+        $save->name = 'decals.save';
+        $save->display_name = '保存贴图';
+        $save->description = "保存贴图";
+        $save->save();
+
+        $delete = new Permission();
+        $delete->name = 'decals.delete';
+        $delete->display_name = '删除贴图';
+        $delete->description = "删除贴图";
+        $delete->save();
+
+        $file = new Permission();
+        $file->name = "decals.file";
+        $file->display_name = "贴图文件";
+        $file->description = "贴图文件";
+        $file->save();
+
+        $image = new Permission();
+        $image->name = "decals.image";
+        $image->display_name = "贴图图片";
+        $image->description = "贴图图片";
+        $image->save();
+    }
+
+    public function plugins()
+    {
+        $list = new Permission();
+        $list->name = 'plugins.list';
+        $list->display_name = '插件列表';
+        $list->description = "插件列表";
+        $list->save();
+
+        $add = new Permission();
+        $add->name = 'plugins.add';
+        $add->display_name = '增加插件';
+        $add->description = "增加插件";
+        $add->save();
+
+        $edit = new Permission();
+        $edit->name = 'plugins.edit';
+        $edit->display_name = '编辑插件';
+        $edit->description = "编辑插件";
+        $edit->save();
+
+        $save = new Permission();
+        $save->name = 'plugins.save';
+        $save->display_name = '保存插件';
+        $save->description = "保存插件";
+        $save->save();
+
+        $delete = new Permission();
+        $delete->name = 'plugins.delete';
+        $delete->display_name = '删除插件';
+        $delete->description = "删除插件";
+        $delete->save();
+
+        $file = new Permission();
+        $file->name = "plugins.file";
+        $file->display_name = "插件文件";
+        $file->description = "插件文件";
+        $file->save();
+
+        $image = new Permission();
+        $image->name = "plugins.image";
+        $image->display_name = "插件图片";
+        $image->description = "插件图片";
+        $image->save();
     }
 }

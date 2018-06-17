@@ -28,4 +28,14 @@ class User extends AuthUser
     {
         $this->attributes['password'] = bcrypt($value);
     }
+
+    public function vip()
+    {
+        return $this->hasOne(Vip::class);
+    }
+
+    public function black()
+    {
+        return $this->hasOne(Black::class);
+    }
 }
