@@ -40,7 +40,7 @@ class ModelRepositoryEloquent extends BaseRepository implements ModelRepositoryI
 
     public function get($limit = 10 , $colums = "[*]")
     {
-        $lists =  $this->paginate($limit , $colums );
+        $lists =  $this->orderBy('updated_at' , 'desc')->paginate($limit , $colums );
 
         if(count($lists)){
             foreach ($lists as &$list){

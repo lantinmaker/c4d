@@ -16,10 +16,10 @@ interface BaseController
 {
     public function index();
     public function create();
-    public function update(Request $request);
+    public function update(Request $request , $id);
     public function store(Request $request);
     public function edit($id);
-    public function destory($id);
+    public function destroy($id);
     public function images($id);
     public function files($id);
 }

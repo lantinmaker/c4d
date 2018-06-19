@@ -20,7 +20,7 @@ class PluginController extends Controller implements ControllerInterface
         // TODO: Implement index() method.
     }
 
-    public function update(Request $request)
+    public function update(Request $request ,$id)
     {
         // TODO: Implement update() method.
     }
@@ -45,7 +45,7 @@ class PluginController extends Controller implements ControllerInterface
         // TODO: Implement images() method.
     }
 
-    public function destory($id)
+    public function destroy($id)
     {
         // TODO: Implement destory() method.
     }

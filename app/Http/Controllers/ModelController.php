@@ -8,5 +8,8 @@ use App\Http\Requests;
 
 class ModelController extends Controller
 {
-    //
+    public function index()
+    {
+        return view('front.model.index');
+    }
 }

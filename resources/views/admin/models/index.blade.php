@@ -45,20 +45,17 @@
                         <table class="table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th style="width: 20%;">名称</th>
-                                <th style="width: 10%;">价格</th>
-                                <th style="width: 10%;">图片数量</th>
-                                <th style="width: 10%;">文件数量</th>
-                                <th style="width: 10%;">文件总大小</th>
-                                {{--<th style="width: 4%;">多边形</th>--}}
-                                {{--<th style="width: 3%;">顶点</th>--}}
-                                {{--<th style="width: 3%;">纹理</th>--}}
-                                {{--<th style="width: 3%;">物料</th>--}}
-                                {{--<th style="width: 3%;">非法操作</th>--}}
-                                {{--<th style="width: 3%;">动画</th>--}}
-                                {{--<th style="width: 5%;">可3D打印</th>--}}
-                                {{--<th style="width: 5%;">可用于游戏</th>--}}
-                                {{--<th style="width: 5%;">紫外映射</th>--}}
+                                <th style="width: 15%;">名称</th>
+                                <th style="width: 5%;">价格</th>
+                                <th style="width: 4%;">多边形</th>
+                                <th style="width: 3%;">顶点</th>
+                                <th style="width: 3%;">纹理</th>
+                                <th style="width: 3%;">物料</th>
+                                <th style="width: 3%;">非法操作</th>
+                                <th style="width: 3%;">动画</th>
+                                <th style="width: 5%;">可3D打印</th>
+                                <th style="width: 5%;">可用于游戏</th>
+                                <th style="width: 5%;">紫外映射</th>
                                 <th style="width: 10%;">更新时间</th>
                                 <th style="width: 20%;">操作</th>
                             </tr>
@@ -68,18 +65,15 @@
                                 <tr>
                                     <td>{{ $model->title }}</td>
                                     <td><i class="fa fa-yen"></i>{{ $model->price }}</td>
-                                    {{--<td>{{ $model->polygons }}</td>--}}
-                                    {{--<td>{{ $model->vertices }}</td>--}}
-                                    {{--<td>{{ y_n($model->textures) }}</td>--}}
-                                    {{--<td>{{ y_n($model->materials) }}</td>--}}
-                                    {{--<td>{{ y_n($model->rigged) }}</td>--}}
-                                    {{--<td>{{ y_n($model->animated) }}</td>--}}
-                                    {{--<td>{{ y_n($model->printable_ready_3d) }}</td>--}}
-                                    {{--<td>{{ y_n($model->game_ready) }}</td>--}}
-                                    {{--<td>{{ y_n($model->uv_mapped) }}</td>--}}
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td>{{ $model->polygons }}</td>
+                                    <td>{{ $model->vertices }}</td>
+                                    <td>{{ y_n($model->textures) }}</td>
+                                    <td>{{ y_n($model->materials) }}</td>
+                                    <td>{{ y_n($model->rigged) }}</td>
+                                    <td>{{ y_n($model->animated) }}</td>
+                                    <td>{{ y_n($model->printable_ready_3d) }}</td>
+                                    <td>{{ y_n($model->game_ready) }}</td>
+                                    <td>{{ y_n($model->uv_mapped) }}</td>
                                     <td>{{ $model->updated_at }}</td>
                                     <td>{!! $model->button !!}</td>
                                 </tr>

@@ -1,0 +1,26 @@
+.a-btn {
+    display: inline-block;
+    margin: 4px 0;
+    padding: 8px 10px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 8px;
+    font-weight: 400;
+    text-align: center;
+
+    font-size: 16px;
+    border:0px;
+    width:120px;
+}
+
+.a-btn.a-btn-green {
+    background:#ffffff;
+}
+.a-btn.a-btn-green:hover{
+    background:#E8EDEC;
+}
+
+.a-btn.a-btn-orange{
+    background:-webkit-linear-gradient(45deg, #ff9600 ,#FF9900);
+}
+

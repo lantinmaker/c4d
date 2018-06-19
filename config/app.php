@@ -176,6 +176,8 @@ return [
          * laravel-debugbar
          */
         Barryvdh\Debugbar\ServiceProvider::class,
+
+        Laravelista\Ekko\EkkoServiceProvider::class,
     ],
 
     /*
@@ -231,6 +233,8 @@ return [
          * laravel-debugbar
          */
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+
+        'Ekko' => Laravelista\Ekko\Facades\Ekko::class
     ],
 
 ];

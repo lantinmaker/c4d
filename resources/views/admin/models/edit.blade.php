@@ -60,40 +60,41 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-2 col-sm-2" for="polygons">polygons * :</label>
+                                <label class="control-label col-md-2 col-sm-2" for="polygons">多边形 * :</label>
                                 <div class="col-md-4 col-sm-4">
                                     <input class="form-control" type="text" name="polygons" placeholder="polygons" data-parsley-required="true" data-parsley-required-message="polygons" value="{{ $model->polygons }}"/>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-2 col-sm-2" for="vertices">vertices * :</label>
+                                <label class="control-label col-md-2 col-sm-2" for="vertices">顶点 * :</label>
                                 <div class="col-md-4 col-sm-4">
                                     <input class="form-control" type="text" name="vertices" placeholder="vertices" data-parsley-required="true" data-parsley-required-message="vertices" value="{{ $model->vertices }}"/>
                                 </div>
                             </div>
                             <div class="form-group">
+
                                 <label class="control-label col-md-2 col-sm-2" for="description">其他 * :</label>
                                 <div class="col-md-10 col-sm-10">
                                     <div class="col-md-3 col-sm-3">
-                                        <input type="checkbox" name="textures" data-render="switchery" data-theme="purple" @if( $model->textures === "y") checked @endif /> textures
+                                        <input type="checkbox" name="textures" data-render="switchery" data-theme="purple" @if( $model->textures === "y") checked @endif value="y" /> 纹理
                                     </div>
                                     <div class="col-md-3 col-sm-3">
-                                        <input type="checkbox" name="materials" data-render="switchery" data-theme="purple" @if( $model->materials === "y") checked @endif /> materials
+                                        <input type="checkbox" name="materials" data-render="switchery" data-theme="purple" @if( $model->materials === "y") checked @endif value="y" /> 材质
                                     </div>
                                     <div class="col-md-3 col-sm-3">
-                                        <input type="checkbox" name="rigged" data-render="switchery" data-theme="purple" @if( $model->rigged === "y") checked @endif /> rigged
+                                        <input type="checkbox" name="rigged" data-render="switchery" data-theme="purple" @if( $model->rigged === "y") checked @endif value="y" /> 控制
                                     </div>
                                     <div class="col-md-3 col-sm-3">
-                                        <input type="checkbox" name="animated" data-render="switchery" data-theme="purple"  @if( $model->animated === "y") checked @endif /> animated
+                                        <input type="checkbox" name="animated" data-render="switchery" data-theme="purple"  @if( $model->animated === "y") checked @endif value="y" /> 动画
                                     </div>
                                     <div class="col-md-3 col-sm-3">
-                                        <input type="checkbox" name="printable_ready_3d" data-render="switchery" data-theme="purple"  @if( $model->printable_ready_3d === "y") checked @endif /> printable_ready_3d
+                                        <input type="checkbox" name="printable_ready_3d" data-render="switchery" data-theme="purple"  @if( $model->printable_ready_3d === "y") checked @endif value="y" /> 可3D打印
                                     </div>
                                     <div class="col-md-3 col-sm-3">
-                                        <input type="checkbox" name="game_ready" data-render="switchery" data-theme="purple" @if( $model->game_ready === "y") checked @endif /> game_ready
+                                        <input type="checkbox" name="game_ready" data-render="switchery" data-theme="purple" @if( $model->game_ready === "y") checked @endif value="y" /> 可用于游戏
                                     </div>
                                     <div class="col-md-3 col-sm-3">
-                                        <input type="checkbox" name="uv_mapped" data-render="switchery" data-theme="purple"  @if( $model->uv_mapped === "y") checked @endif /> uv_mapped
+                                        <input type="checkbox" name="uv_mapped" data-render="switchery" data-theme="purple"  @if( $model->uv_mapped === "y") checked @endif value="y" /> UV映射
                                     </div>
                                 </div>
 

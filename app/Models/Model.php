@@ -40,6 +40,6 @@ class Model extends BaseModel
 
     public function image()
     {
-        $this->hasManyThrough(Image::class , 'model_images');
+        $this->hasManyThrough(Image::class , ModelImage::class);
     }
 }

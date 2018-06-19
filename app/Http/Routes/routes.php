@@ -11,9 +11,13 @@
 |
  */
 
-Route::get('/', ['middleware' => 'web', function () {
-    return view('index');
-}]);
+Route::group( ['middleware' => ['web']], function () {
+    Route::get('/','HomeController@index')->name('home.index');
+    Route::get('/model/{id}','ModelController@detail')->name('model.detail');
+    Route::get('/models','ModelController@index')->name('model.index');
+
+    Route::get('/bbs','BBSController@index')->name('bbs.index');
+});
 
 /*
 |--------------------------------------------------------------------------

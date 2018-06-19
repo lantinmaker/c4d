@@ -22,6 +22,7 @@ Route::group(['middleware' => ['auth:admin']], function ($router) {
 
     $router->get('models/{id?}/files' , 'Documents\ModelController@files');
     $router->get('models/{id?}/images' , 'Documents\ModelController@images');
+    $router->post('models/{id?}/images/ajaxsort' , ['uses' => 'Documents\ModelController@imageSort' , 'as' => 'admin.models.images.ajaxsort'] );
     $router->resource('models' , 'Documents\ModelController');
 
 
