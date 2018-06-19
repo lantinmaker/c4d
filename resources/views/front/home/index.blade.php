@@ -1,7 +1,7 @@
 @extends('front.base.base')
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('css/bpHs.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/bphs.css') }}">
 @endsection
 
 @section('content')
